@@ -1,0 +1,295 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Primera Aplicacion</title>
+
+<!--grupo CSS-->
+<link rel="stylesheet" href="css/temapp3.min.css"/>
+<link rel="stylesheet" href="css/jquery.mobile.icons-1.4.5.min.css"/>
+<link rel="stylesheet" href="css/jquery.mobile.structure-1.4.5.min.css"/>
+<!--grupo JavaScript-->
+<script src="js/jquery-1.11.2.min.js"></script>
+<script src="js/jquery.mobile-1.4.5.min.js"></script>
+<script src="js/acciones.js"></script>
+<script src="acciones" type="text/javascript"></script>
+<script type="text/javascript">
+function MM_swapImgRestore() { //v3.0
+  var i,x,a=document.MM_sr; for(i=0;a&&i<a.length&&(x=a[i])&&x.oSrc;i++) x.src=x.oSrc;
+}
+function MM_preloadImages() { //v3.0
+  var d=document; if(d.images){ if(!d.MM_p) d.MM_p=new Array();
+    var i,j=d.MM_p.length,a=MM_preloadImages.arguments; for(i=0; i<a.length; i++)
+    if (a[i].indexOf("#")!=0){ d.MM_p[j]=new Image; d.MM_p[j++].src=a[i];}}
+}
+
+function MM_findObj(n, d) { //v4.01
+  var p,i,x;  if(!d) d=document; if((p=n.indexOf("?"))>0&&parent.frames.length) {
+    d=parent.frames[n.substring(p+1)].document; n=n.substring(0,p);}
+  if(!(x=d[n])&&d.all) x=d.all[n]; for (i=0;!x&&i<d.forms.length;i++) x=d.forms[i][n];
+  for(i=0;!x&&d.layers&&i<d.layers.length;i++) x=MM_findObj(n,d.layers[i].document);
+  if(!x && d.getElementById) x=d.getElementById(n); return x;
+}
+
+function MM_swapImage() { //v3.0
+  var i,j=0,x,a=MM_swapImage.arguments; document.MM_sr=new Array; for(i=0;i<(a.length-2);i+=3)
+   if ((x=MM_findObj(a[i]))!=null){document.MM_sr[j++]=x; if(!x.oSrc) x.oSrc=x.src; x.src=a[i+2];}
+}
+</script>
+</head>
+
+<body onLoad="MM_preloadImages('imagenes/popod.jpeg','imagenes/le2.jpg','imagenes/actividad2.jpg')">
+<div data-role="page" id="Principal" data-theme="a">
+    <div data-role="header" data-add-back-btn="true" data-add-back-btn="Regresar" data-back-btn-theme="b">
+    <h1>VOLCAN POPOCATEPETL </h1>
+   </div>
+<div data-role="main" class="ui-content">
+   <div data-role="collapsible" data-content-theme="false">
+   <h1>VOLCAN POPOCATEPETL</h1>
+   <div>
+   <p>Esta es una imagen del volcan:
+   <br>
+   </div>
+   <div>
+     <a href="#" onMouseOut="MM_swapImgRestore()" onMouseOver="MM_swapImage('goyo','','imagenes/popod.jpeg',1)"><img src="imagenes/goyo.jpg" width="700" height="466" id="goyo"></a></div>
+   </div>
+   </div>
+   
+   <div>
+   <ul data-role="listview" data-theme="a" class="ui-listview ui-group-theme-a">
+   <li class="ui-first-child ui-last-child">
+   <a href="#Pagina1" class="ui-btn ui-btn-icon-right ui-icon-carat-r">
+   <h2>UBICACION </h2>
+   <p>Se muestra la ubicacion del volcan.</p>
+   </a>
+   </li>
+    <li class="ui-first-child ui-last-child">
+   <a href="#Pagina2" class="ui-btn ui-btn-icon-right ui-icon-carat-r">
+   <h2>TAMAÑO </h2>
+   <p>Se muestra el tamaño del volcan</p>
+   </a>
+   </li>
+     <li class="ui-first-child ui-last-child">
+   <a href="#Pagina3" class="ui-btn ui-btn-icon-right ui-icon-carat-r">
+   <h2>ANTIGUEDAD </h2>
+   <p>Muestra de que año aproximadamente existe este volcan</p>
+   </a>
+   </li>
+      <li class="ui-first-child ui-last-child">
+   <a href="#Pagina4" class="ui-btn ui-btn-icon-right ui-icon-carat-r">
+   <h2>HISTORIA O LEYENDA</h2>
+   <p>Muestra una historia o leyenda de este volcan</p>
+   </a>
+   </li>
+    <li class="ui-first-child ui-last-child">
+   <a href="#Pagina5" class="ui-btn ui-btn-icon-right ui-icon-carat-r">
+   <h2>ACTIVIDAD VOLCANICA</h2>
+   <p>Muestra una historia o leyenda de este volcan</p>
+   </a>
+   </li>
+       <li class="ui-first-child ui-last-child">
+   <a href="#Pagina6" class="ui-btn ui-btn-icon-right ui-icon-carat-r">
+   <h2>MONITOREO</h2>
+   <p>Muestra como se monitorea el volcan</p>
+   </a>
+   </li>
+   <li class="ui-first-child ui-last-child">
+   <a href="#Pagina7" class="ui-btn ui-btn-icon-right ui-icon-carat-r">
+   <h2>MEDIDAS PREVENTIVAS </h2>
+   <p>Muestra algunas medidas que se deben de tomar como prevencion </p>
+   </a>
+   </li>
+   <li class="ui-first-child ui-last-child">
+   <a href="#Pagina8" class="ui-btn ui-btn-icon-right ui-icon-carat-r">
+   <h2>ESTADOS AFECTADOS </h2>
+   <p>Muestra los lugares podrian resultar aafectados en caso de un accidente</p>
+   </a>
+   </li>
+   </ul>
+  </div>
+<div data-role="footer" align="center" data-theme="a">
+   <div>
+   <img src="imagenes/volcan.png" width="46" height="46">
+   </div>
+    <div>
+    <h4>Aplicacion tres</h4>
+    <h4>Belen Tepoz Romero</h4>
+    </div>
+    </div>
+    </div>
+    
+     <div data-role="page" id="Pagina1" data-add-back-btn="true" data-theme="a">
+     <div data-role="header" data-add-back-btn="true" data-back-btn-text="Regresar" data-back-btn-theme="b">
+     <h1>UBICACION</h1>
+      </div>
+       <div data-role="content" align="center">
+       <div>
+       <img src="imagenes/ub.jpg" width="50%" height="50%">
+       <p>El Popocatépetl esta ubicado en los estados de Morelos, Puebla (45 kilometros) y el Estado de México( a 55 kilometros). Al sur de la Sierra Volcánica Transversal que constituye la espina dorsal del Altiplano Mexicano.</p>
+       <img src="imagenes/ub2.jpg" width="50%" height="50%">
+      <p> En el Estado de México colinda con los municipios: Tlamanalco, Amecameca, Atlauta y Ecatzingo.
+Con el estado de Morelos colinda específicamente con el municipio de Tetela del Volcán.
+Por la parte de Puebla colinda con Huejotzingo, San Salvador el Verde, Domingo Arenas, San Nicolás de los Ranchos y Tochimilco.</p>
+       </div>
+       </div>
+       <div data-role="footer" data-theme="a">
+       <h4>Aplicacion tres BTR</h4>
+        </div>
+         </div>
+          </div>
+          
+          <div data-role="page" id="Pagina2" data-add-back-btn="true" data-theme="a">
+          <div data-role="header" data-add-back-btn="true" data-back-btn-text="Regresar" data-back-btn-theme="b">
+           <h1>TAMAÑO</h1>
+           </div>
+            <div data-role="content" align="center">
+            <div>
+              <p>Su altura es de 5500 msnm, es de forma cónica, tiene un diámetro de 25 km en su base y la cima es el corte elíptico de un cono y tiene una orientación noreste-suroeste. La distancia entre las paredes de su cráter varía entre los 660 y los 840 m. El cráter del Popocatépetl es elíptico, de 850 m de eje mayor y de 750 m de eje menor, con una profundidad de 250 a 300 m.</p>
+<img src="imagenes/ta.jpg" width="50%" height="50%">
+            </div>
+            </div>
+       <div data-role="footer" data-theme="a">
+       <h4>Aplicacion Uno BTR</h4>
+         </div>
+         </div>
+          </div>
+          
+            <div data-role="page" id="Pagina3" data-add-back-btn="true" data-theme="a">
+          <div data-role="header" data-add-back-btn="true" data-back-btn-text="Regresar" data-back-btn-theme="b">
+           <h1>ANTIGUEDAD</h1>
+           </div>
+            <div data-role="content" align="center">
+            <div>
+            <img src="imagenes/anti.jpg" width="50%" height="50%">
+               <p>El popocatepetl, con aproximadamente 730 mil años de edad, ha gozado desde epocas prehispanicas, coloniales y contemporaneas de una importancia tal para las sociedades que con él han convivido, que lo han convertido en fuente de inspiracion de historias, a veces increibles.</p>
+<img src="imagenes/ta.jpg" width="50%" height="50%">
+                       </div>
+                        </div>
+       <div data-role="footer" data-theme="a">
+       <h4>Aplicacion tres BTR</h4>
+         </div>
+         </div>
+          </div>
+          
+             <div data-role="page" id="Pagina4" data-add-back-btn="true" data-theme="a">
+          <div data-role="header" data-add-back-btn="true" data-back-btn-text="Regresar" data-back-btn-theme="b">
+           <h1>HISTORIA O LEYENDA</h1>
+           </div>
+            <div data-role="content" align="center">
+            <div>
+            <img src="imagenes/le3.jpg" width="50%" height="50%">
+             <p>Popocatépetl y el volcán cercano Iztaccíhuatl fueron una vez un guerrero joven y una princesa. El padre de Iztaccíhuatl no la dejaba casarse hasta que Popocatépetl hubiera vencido a un enemigo tribal temible en batalla. Aunque mató al enemigo, uno de los rivales de Popocatépetl envío un falso mensaje de que había muerto en la batalla e Iztaccíhuatl, con el corazón roto, murió de pena. A su regreso, Popocatépetl fue devastado por la noticia de la muerte de su amante y murió junto a ella después de llevarla a las montañas. Los Dioses que observaban los convirtieron en montañas para que pudieran estar juntos por siempre y las ocasionales erupciones del pico volcánico de Popocatépetl son recordatorios de que aún está allí, junto a su amante.</p>
+
+             <a href="#" onMouseOut="MM_swapImgRestore()" onMouseOver="MM_swapImage('leyenda','','imagenes/le2.jpg',1)"><img src="imagenes/le.jpg" width="700" height="350" id="leyenda"></a> </div>
+            </div>
+       <div data-role="footer" data-theme="a">
+       <h4>Aplicacion tres BTR</h4>
+         </div>
+         </div>
+          </div>
+          
+<div data-role="page" id="Pagina5" data-add-back-btn="true" data-theme="a">
+          <div data-role="header" data-add-back-btn="true" data-back-btn-text="Regresar" data-back-btn-theme="b">
+           <h1>ACTIVIDAD VOLCANICA</h1>
+           </div>
+            <div data-role="content" align="center">
+            <div>
+            <a href="#" onMouseOut="MM_swapImgRestore()" onMouseOver="MM_swapImage('Image11','','imagenes/actividad2.jpg',1)"><img src="imagenes/actividad.jpg" width="485" height="104" id="Image11"></a>
+<p> Las erupciones volcánicas pueden ser precedidas por cambios en la actividad sísmica y vulcanomagnética, en la composición química de los gases, del agua de manantiales y algunas veces por deformación. Para hacer un pronóstico volcánico adecuado es necesario reconocer estas señales indicativas de una erupción y su temporalidad. Las erupciones del Popocatépetl que comenzaron el 21 de diciembre 1994, fueron precedidas por aumentos en los eventos sísmicos vulcanotectónicos (VT), cambios en temperatura y concentración de sulfatos y cloruros en el lago del cráter y en la pCO2 en los manantiales.</p>
+           <!-- Start WOWSlider.com -->
+<iframe src="visor/indexvisor.html" style="width:800px;height:600px;max-width:100%;overflow:hidden;border:none;padding:0;margin:0 auto;display:block;" marginheight="0" marginwidth="0"></iframe>
+<!-- End WOWSlider.com -->
+ <p>También hubo un descenso en pH en algunos manantiales varios meses antes de la erupción. Los eventos sísmicos de periodo largo también aumentaron antes de algunas erupciones y los episodios de tremor armónico así como las anomalías magnéticas negativas antecedieron a la formación de domos y están ligadas al ascenso de magma.</p>
+            </div>
+            </div>
+       <div data-role="footer" data-theme="a">
+       <h4>Aplicacion tres BTR</h4>
+         </div>
+         </div>
+          </div>
+     
+          <div data-role="page" id="Pagina6" data-add-back-btn="true" data-theme="a">
+          <div data-role="header" data-add-back-btn="true" data-back-btn-text="Regresar" data-back-btn-theme="b">
+           <h1>MONITOREO</h1>
+           </div>
+            <div data-role="content" align="center">
+            <div>
+             <p>La observación y vigilancia de un volcán activo usualmente se lleva a cabo utilizando técnicas de telemedición o telemetría mediante las cuales las señales medidas en las estaciones remotas se trasmiten por radio hacia un puesto central para su registro continuo e inmediata evaluación.La red del Popocatépetl, actualmente en operación, consta de 12 estaciones remotas y una estación central de adquisición y procesamiento de datos localizada en las instalaciones del CENAPRED. Las estaciones de campo están instaladas en las faldas alrededor del volcán en altitudes entre los 2500 y 4313 m, estando la más cercana a 2 km de distancia del cráter. </p>
+<img src="imagenes/mo.jpg" width="50%" height="50%">
+            </div>
+            </div>
+       <div data-role="footer" data-theme="a">
+       <h4>Aplicacion tres BTR</h4>
+         </div>
+         </div>
+          </div>
+          
+<div data-role="page" id="Pagina7" data-add-back-btn="true" data-theme="a">
+          <div data-role="header" data-add-back-btn="true" data-back-btn-text="Regresar" data-back-btn-theme="b">
+           <h1>MEDIDAS PREVENTIVAS EN CASO DE:</h1>
+           </div>
+            <div data-role="content" align="center">
+            <div>
+               <div data-role="collapsible" data-content-theme="false">
+   <h1>CAIDA DE CENIZA</h1>
+   <div>
+   <p>-No humedecer la ceniza a fin de evitar taponamientos en el sistema de alcantarillado<br>
+      -Mantén la calma.<br>
+      -No realices actividades al aire libre y si es posible no salgas.<br>
+      -Para los ojos, usa lentes protectores, especialmente si usas lentes de contacto.<br>
+      -Ante la caída de ceniza volcánica evita consumir alimentos en la vía pública.<br>
+      Cubre tinacos, cisternas y depósitos de agua.<br></p>
+      <div data-role="collapsible" data-content-theme="false">
+   <h4>Busca un albergue.</h4>
+   <div>
+   <p>Algunos albergues:</p>
+   </div>
+   <div>
+    <img src="imagenes/albergue.jpg" width="50%" height="50%">
+         </div>
+   </div>
+      </div>
+   <div>
+          </div>
+   </div>
+    <div data-role="collapsible" data-content-theme="false">
+   <h1>ERUPCION.</h1>
+   <div>
+   <p>-Mantente alejado de volcanes activos.
+   <br>
+   -Si vives cerca de un volcán activo, prepara un kit de emergencia que incluya gafas de seguridad, una máscara, una linterna y una radio en buen estado que funcione con pilas.<br>
+   -Elabora una ruta de evacuación y ten el depósito de gasolina del coche siempre lleno.<br>
+   -Evita zonas de ríos y regiones bajas.<br>
+    ponte una camisa de manga larga y pantalones largos; usa gafas de seguridad o normales, sin lentillas.<br>/<p>
+   </div>
+   <div>
+    <img src="imagenes/erupcion.jpg" width="50%" height="50%">
+       
+   </div>
+   </div>
+            </div>
+            </div>
+       <div data-role="footer" data-theme="a">
+       <h4>Aplicacion tres BTR</h4>
+         </div>
+         </div>
+          </div>
+<div data-role="page" id="Pagina8" data-add-back-btn="true" data-theme="a">
+          <div data-role="header" data-add-back-btn="true" data-back-btn-text="Regresar" data-back-btn-theme="b">
+           <h1>ESTADOS EFECTAROS</h1>
+           </div>
+            <div data-role="content" align="center">
+            <div>
+             <p>El espacio territorial que se ha analizado en el estudio es de aproximadamente 15,708 km² y abarca el Distrito Federal, Tlaxcala, Morelos y parcialmente los estados de Hidalgo, México y Puebla.
+
+Un caso particular de afectación se presentaría para la Ciudad de México, debido a que las cantidades de ceniza provenientes del Popocatépetl se añadirían a sus condiciones de alta contaminación (se han detectado cuando menos 100 contaminantes en su aire), y por consiguiente habría mayores riesgos para la salud de sus habitantes. </p>
+<img src="imagenes/peligro.jpg" width="50%" height="50%">
+            </div>
+            </div>
+       <div data-role="footer" data-theme="a">
+       <h4>Aplicacion tres BTR</h4>
+         </div>
+         </div>
+          </div>
+</body>
+</html>
